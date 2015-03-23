@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		106AE05A1AC0B2E100320180 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106AE0591AC0B2E100320180 /* AppDelegate.swift */; };
+		106AE05C1AC0B2E100320180 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106AE05B1AC0B2E100320180 /* ViewController.swift */; };
+		106AE05F1AC0B2E100320180 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 106AE05D1AC0B2E100320180 /* Main.storyboard */; };
+		106AE0611AC0B2E100320180 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 106AE0601AC0B2E100320180 /* Images.xcassets */; };
+		106AE0641AC0B2E100320180 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 106AE0621AC0B2E100320180 /* LaunchScreen.xib */; };
+		106AE0701AC0B2E100320180 /* ios_timetravelerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106AE06F1AC0B2E100320180 /* ios_timetravelerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		106AE06A1AC0B2E100320180 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 106AE04C1AC0B2E100320180 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 106AE0531AC0B2E100320180;
+			remoteInfo = "ios-timetraveler";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		106AE0541AC0B2E100320180 /* ios-timetraveler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-timetraveler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		106AE0581AC0B2E100320180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		106AE0591AC0B2E100320180 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		106AE05B1AC0B2E100320180 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		106AE05E1AC0B2E100320180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		106AE0601AC0B2E100320180 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		106AE0631AC0B2E100320180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		106AE0691AC0B2E100320180 /* ios-timetravelerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-timetravelerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		106AE06E1AC0B2E100320180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		106AE06F1AC0B2E100320180 /* ios_timetravelerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_timetravelerTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		106AE0511AC0B2E100320180 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		106AE0661AC0B2E100320180 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		106AE04B1AC0B2E100320180 = {
+			isa = PBXGroup;
+			children = (
+				106AE0561AC0B2E100320180 /* ios-timetraveler */,
+				106AE06C1AC0B2E100320180 /* ios-timetravelerTests */,
+				106AE0551AC0B2E100320180 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		106AE0551AC0B2E100320180 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				106AE0541AC0B2E100320180 /* ios-timetraveler.app */,
+				106AE0691AC0B2E100320180 /* ios-timetravelerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		106AE0561AC0B2E100320180 /* ios-timetraveler */ = {
+			isa = PBXGroup;
+			children = (
+				106AE0591AC0B2E100320180 /* AppDelegate.swift */,
+				106AE05B1AC0B2E100320180 /* ViewController.swift */,
+				106AE05D1AC0B2E100320180 /* Main.storyboard */,
+				106AE0601AC0B2E100320180 /* Images.xcassets */,
+				106AE0621AC0B2E100320180 /* LaunchScreen.xib */,
+				106AE0571AC0B2E100320180 /* Supporting Files */,
+			);
+			path = "ios-timetraveler";
+			sourceTree = "<group>";
+		};
+		106AE0571AC0B2E100320180 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				106AE0581AC0B2E100320180 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		106AE06C1AC0B2E100320180 /* ios-timetravelerTests */ = {
+			isa = PBXGroup;
+			children = (
+				106AE06F1AC0B2E100320180 /* ios_timetravelerTests.swift */,
+				106AE06D1AC0B2E100320180 /* Supporting Files */,
+			);
+			path = "ios-timetravelerTests";
+			sourceTree = "<group>";
+		};
+		106AE06D1AC0B2E100320180 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				106AE06E1AC0B2E100320180 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		106AE0531AC0B2E100320180 /* ios-timetraveler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 106AE0731AC0B2E100320180 /* Build configuration list for PBXNativeTarget "ios-timetraveler" */;
+			buildPhases = (
+				106AE0501AC0B2E100320180 /* Sources */,
+				106AE0511AC0B2E100320180 /* Frameworks */,
+				106AE0521AC0B2E100320180 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ios-timetraveler";
+			productName = "ios-timetraveler";
+			productReference = 106AE0541AC0B2E100320180 /* ios-timetraveler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		106AE0681AC0B2E100320180 /* ios-timetravelerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 106AE0761AC0B2E100320180 /* Build configuration list for PBXNativeTarget "ios-timetravelerTests" */;
+			buildPhases = (
+				106AE0651AC0B2E100320180 /* Sources */,
+				106AE0661AC0B2E100320180 /* Frameworks */,
+				106AE0671AC0B2E100320180 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				106AE06B1AC0B2E100320180 /* PBXTargetDependency */,
+			);
+			name = "ios-timetravelerTests";
+			productName = "ios-timetravelerTests";
+			productReference = 106AE0691AC0B2E100320180 /* ios-timetravelerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		106AE04C1AC0B2E100320180 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = bensoer;
+				TargetAttributes = {
+					106AE0531AC0B2E100320180 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					106AE0681AC0B2E100320180 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 106AE0531AC0B2E100320180;
+					};
+				};
+			};
+			buildConfigurationList = 106AE04F1AC0B2E100320180 /* Build configuration list for PBXProject "ios-timetraveler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 106AE04B1AC0B2E100320180;
+			productRefGroup = 106AE0551AC0B2E100320180 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				106AE0531AC0B2E100320180 /* ios-timetraveler */,
+				106AE0681AC0B2E100320180 /* ios-timetravelerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		106AE0521AC0B2E100320180 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				106AE05F1AC0B2E100320180 /* Main.storyboard in Resources */,
+				106AE0641AC0B2E100320180 /* LaunchScreen.xib in Resources */,
+				106AE0611AC0B2E100320180 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		106AE0671AC0B2E100320180 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		106AE0501AC0B2E100320180 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				106AE05C1AC0B2E100320180 /* ViewController.swift in Sources */,
+				106AE05A1AC0B2E100320180 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		106AE0651AC0B2E100320180 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				106AE0701AC0B2E100320180 /* ios_timetravelerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		106AE06B1AC0B2E100320180 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 106AE0531AC0B2E100320180 /* ios-timetraveler */;
+			targetProxy = 106AE06A1AC0B2E100320180 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		106AE05D1AC0B2E100320180 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				106AE05E1AC0B2E100320180 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		106AE0621AC0B2E100320180 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				106AE0631AC0B2E100320180 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		106AE0711AC0B2E100320180 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		106AE0721AC0B2E100320180 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		106AE0741AC0B2E100320180 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ios-timetraveler/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		106AE0751AC0B2E100320180 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ios-timetraveler/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		106AE0771AC0B2E100320180 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ios-timetravelerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-timetraveler.app/ios-timetraveler";
+			};
+			name = Debug;
+		};
+		106AE0781AC0B2E100320180 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ios-timetravelerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-timetraveler.app/ios-timetraveler";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		106AE04F1AC0B2E100320180 /* Build configuration list for PBXProject "ios-timetraveler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				106AE0711AC0B2E100320180 /* Debug */,
+				106AE0721AC0B2E100320180 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		106AE0731AC0B2E100320180 /* Build configuration list for PBXNativeTarget "ios-timetraveler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				106AE0741AC0B2E100320180 /* Debug */,
+				106AE0751AC0B2E100320180 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		106AE0761AC0B2E100320180 /* Build configuration list for PBXNativeTarget "ios-timetravelerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				106AE0771AC0B2E100320180 /* Debug */,
+				106AE0781AC0B2E100320180 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 106AE04C1AC0B2E100320180 /* Project object */;
+}
