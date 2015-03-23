@@ -14,6 +14,7 @@
 		106AE0641AC0B2E100320180 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 106AE0621AC0B2E100320180 /* LaunchScreen.xib */; };
 		106AE0701AC0B2E100320180 /* ios_timetravelerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106AE06F1AC0B2E100320180 /* ios_timetravelerTests.swift */; };
 		10B353BE1AC0CA00003CBEBE /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B353BD1AC0CA00003CBEBE /* Alamofire.swift */; };
+		10B353C01AC0D3DD003CBEBE /* SwiftlyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B353BF1AC0D3DD003CBEBE /* SwiftlyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		106AE06E1AC0B2E100320180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		106AE06F1AC0B2E100320180 /* ios_timetravelerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_timetravelerTests.swift; sourceTree = "<group>"; };
 		10B353BD1AC0CA00003CBEBE /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		10B353BF1AC0D3DD003CBEBE /* SwiftlyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftlyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				106AE0591AC0B2E100320180 /* AppDelegate.swift */,
 				106AE05B1AC0B2E100320180 /* ViewController.swift */,
+				10B353BF1AC0D3DD003CBEBE /* SwiftlyJSON.swift */,
 				106AE05D1AC0B2E100320180 /* Main.storyboard */,
 				106AE0601AC0B2E100320180 /* Images.xcassets */,
 				106AE0621AC0B2E100320180 /* LaunchScreen.xib */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10B353C01AC0D3DD003CBEBE /* SwiftlyJSON.swift in Sources */,
 				10B353BE1AC0CA00003CBEBE /* Alamofire.swift in Sources */,
 				106AE05C1AC0B2E100320180 /* ViewController.swift in Sources */,
 				106AE05A1AC0B2E100320180 /* AppDelegate.swift in Sources */,

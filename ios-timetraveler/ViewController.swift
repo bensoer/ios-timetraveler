@@ -8,6 +8,7 @@
 
 import UIKit
 import Darwin
+//import Alamofire
 
 class ViewController: UIViewController {
 
@@ -29,6 +30,57 @@ class ViewController: UIViewController {
         var day = getDayOfYear(year);
         
         println("Percent: \(percent), Year: \(year), Day: \(day)");
+        
+        getArticle(Int(year));
+        
+    }
+    
+    private func getArticle(year:Int){
+        
+        /*Alamofire.request(.GET, "http://en.wikipedia.org/w/api.php?action=query&continue&prop=extracts&format=json&title=2014")
+            .responseJSON{ (request, response, data, error) in
+                println(request)
+                println(response)
+                println(error)
+            }*/
+        var url = NSURLRequest(URL: NSURL(string: "http://en.wikipedia.org/w/api.php?action=query&continue&prop=extracts&format=json&titles=2014")!);
+        
+        //var connection = NSURLConnection(url, respHandler, startimmediatly:true);
+        
+        NSURLConnection.sendAsynchronousRequest(url, queue: NSOperationQueue.mainQueue(), respHandler);
+        
+        
+    }
+    
+    private func respHandler(resp:NSURLResponse!, data:NSData!, error:NSError!){
+        
+        var jsonData = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil);
+        
+        //println(jsonData);
+        
+        var json = JSON(jsonData!);
+        
+        if let story = json["query"]["pages"].string{
+            var json2 = JSON(story);
+            
+            
+            
+            for(key: String, subJson: JSON) in json2 {
+                
+                
+                if let actual = json2[key]["extract"].string{
+                    println(actual);
+                }
+                
+                
+            }
+            
+            
+            println(story);
+        }
+            println("pass");
+        
+        //println(jsonData[0][0][0][0]);
         
     }
     
