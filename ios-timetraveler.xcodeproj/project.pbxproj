@@ -13,6 +13,7 @@
 		106AE0611AC0B2E100320180 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 106AE0601AC0B2E100320180 /* Images.xcassets */; };
 		106AE0641AC0B2E100320180 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 106AE0621AC0B2E100320180 /* LaunchScreen.xib */; };
 		106AE0701AC0B2E100320180 /* ios_timetravelerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106AE06F1AC0B2E100320180 /* ios_timetravelerTests.swift */; };
+		10B353BE1AC0CA00003CBEBE /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B353BD1AC0CA00003CBEBE /* Alamofire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		106AE0691AC0B2E100320180 /* ios-timetravelerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-timetravelerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		106AE06E1AC0B2E100320180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		106AE06F1AC0B2E100320180 /* ios_timetravelerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_timetravelerTests.swift; sourceTree = "<group>"; };
+		10B353BD1AC0CA00003CBEBE /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				106AE0601AC0B2E100320180 /* Images.xcassets */,
 				106AE0621AC0B2E100320180 /* LaunchScreen.xib */,
 				106AE0571AC0B2E100320180 /* Supporting Files */,
+				10B353BD1AC0CA00003CBEBE /* Alamofire.swift */,
 			);
 			path = "ios-timetraveler";
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10B353BE1AC0CA00003CBEBE /* Alamofire.swift in Sources */,
 				106AE05C1AC0B2E100320180 /* ViewController.swift in Sources */,
 				106AE05A1AC0B2E100320180 /* AppDelegate.swift in Sources */,
 			);
@@ -405,6 +409,7 @@
 				106AE0751AC0B2E100320180 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		106AE0761AC0B2E100320180 /* Build configuration list for PBXNativeTarget "ios-timetravelerTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				106AE0781AC0B2E100320180 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
