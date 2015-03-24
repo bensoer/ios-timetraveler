@@ -49,6 +49,8 @@ class ViewController: UIViewController {
             
             getArticle(Int(year));
             displayDate(percent)
+
+            displayArticlesFromDate(month, day: dateOfMonth);
         }
     }
     
@@ -81,8 +83,28 @@ class ViewController: UIViewController {
         //var monthName:String = Months(rawValue: month);
         
         var string = getMonthName(day);
+        var fullString = "\(string) \(day)";
+        
+        whatHappened.text = "";
+        
+        println(fullString);
+        
         for(data:NSString ) in pageItemsArray{
+            
+            var article = data.rangeOfString(fullString);
+            
+            if(article.location != NSNotFound){
+                println("Article Found");
+                var temp = whatHappened.text;
+                var totalData = temp + data;
+                whatHappened.text = totalData;
+                //break;
+            }
+            
+            
         }
+        
+        println("end");
     }
     
     private func getMonthName(month:Int)->String{
@@ -118,7 +140,7 @@ class ViewController: UIViewController {
     
     private func getArticle(year:Int){
 
-        var url = NSURLRequest(URL: NSURL(string: "http://en.wikipedia.org/w/api.php?action=query&continue&prop=extracts&format=json&titles=2014")!);
+        var url = NSURLRequest(URL: NSURL(string: "http://en.wikipedia.org/w/api.php?action=query&continue&prop=extracts&format=json&titles=\(year)")!);
         
         //var connection = NSURLConnection(url, respHandler, startimmediatly:true);
         
@@ -185,13 +207,13 @@ class ViewController: UIViewController {
                 break;
             }*/
             
-            println("Start: \(startIndexOfLi.location) , End: \(endIndexOfLi.location)");
+            //println("Start: \(startIndexOfLi.location) , End: \(endIndexOfLi.location)");
             
             var difference = endIndexOfLi.location - startIndexOfLi.location;
             
             var text = shrinkingData.substringWithRange(NSRange(location: startIndexOfLi.location + 4 , length: difference - 4));
             
-            println(text);
+            //println(text);
             
             pageItemsArray.append(text);
             
