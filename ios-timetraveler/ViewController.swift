@@ -11,31 +11,27 @@ import Darwin
 import Foundation
 //import Alamofire
 
-
-
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var dateSlider: UISlider!
+    
+    @IBOutlet weak var currentDateValue: UILabel!
+    
+    @IBOutlet weak var currentPercentValue: UILabel!
+    
+    @IBOutlet weak var whatHappened: UITextView!
 
-    
-    
-
-    
-    
-    
-    
-    
     var canUpdate:Bool = true;
     
     var pageItemsArray = Array<NSString>();
     
-    @IBOutlet weak var dateSlider: UISlider!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        currentPercentValue.text = "0.000%"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func sliderMoved(sender: UISlider) {
@@ -52,24 +48,40 @@ class ViewController: UIViewController {
             println("Percent: \(percent), Year: \(year), Day: \(day)");
             
             getArticle(Int(year));
-            
-            
-            
+            displayDate(percent)
         }
-        
-        
     }
     
-    private func displayArticlesFromDate(month:Int, day:Int){
+    private func displayDate(percent:Float){
         
+        let flags: NSCalendarUnit = .DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit
+        let date = NSDate()
+        let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
+        
+        var year = convertPercentToYear(Double(percent));
+        var day = getDayOfYear(year);
+        
+        // Common year
+        if (year > 0) {
+            currentDateValue.text = "\(Int(round(year)))"
+            // Further than our calendar
+        } else if ( round(Double(components.year) - year) < 1000000) {
+            currentDateValue.text = "\(Int(round(Double(components.year) - year))) years ago"
+            // Million years ago
+        } else if (round(Double(components.year) - year) > 1000000 && round(Double(components.year) - year) < 1000000000) {
+            currentDateValue.text = "\(Int(round(Double(components.year) - year) / 1000000)) million years ago"
+            // Billion years ago
+        } else {
+            currentDateValue.text = "\(Int(round(Double(components.year) - year) / 1000000000)) billion years ago"
+        }
+    }
+    
+    private func displayArticlesFromDate(month:Int, day:Int) {
         
         //var monthName:String = Months(rawValue: month);
         
         var string = getMonthName(day);
         for(data:NSString ) in pageItemsArray{
-            
-            
-            
         }
     }
     
@@ -111,8 +123,6 @@ class ViewController: UIViewController {
         //var connection = NSURLConnection(url, respHandler, startimmediatly:true);
         
         NSURLConnection.sendAsynchronousRequest(url, queue: NSOperationQueue.mainQueue(), respHandler);
-        
-        
     }
     
     private func respHandler(resp:NSURLResponse!, data:NSData!, error:NSError!){
@@ -141,15 +151,11 @@ class ViewController: UIViewController {
                                 
                                 
                             }
-                            
                         }
-                        
-                        
                     }
                 }
             }
         }
-        
     }
     
     private func parseDateEventsOutOfPage(html:NSString){
@@ -206,6 +212,12 @@ class ViewController: UIViewController {
     private func convertPercentToYear(percent:Double)->Double{
         
         var percent2 = percent * 100.00;
+        
+        let numberOfPlaces = 3.0
+        let multiplier = pow(10.0, numberOfPlaces)
+        var rounded = round(Double(percent2) * multiplier) / multiplier
+        
+        currentPercentValue.text = "\(rounded)%"
         
         println(percent2);
         

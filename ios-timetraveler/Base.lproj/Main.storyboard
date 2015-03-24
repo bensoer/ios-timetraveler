@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -84,11 +85,11 @@
                                         <exclude reference="qPk-J4-VPu"/>
                                         <exclude reference="GpR-zG-gPh"/>
                                         <exclude reference="LBS-ZZ-JFA"/>
+                                        <exclude reference="9y5-t2-GWj"/>
+                                        <exclude reference="iZz-Uo-jCS"/>
                                         <exclude reference="HFu-bs-NpT"/>
                                         <exclude reference="Sgl-lM-vxS"/>
                                         <exclude reference="dZf-U9-Nru"/>
-                                        <exclude reference="9y5-t2-GWj"/>
-                                        <exclude reference="iZz-Uo-jCS"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -104,19 +105,16 @@
                                         <include reference="qPk-J4-VPu"/>
                                         <include reference="GpR-zG-gPh"/>
                                         <include reference="LBS-ZZ-JFA"/>
+                                        <include reference="9y5-t2-GWj"/>
+                                        <include reference="iZz-Uo-jCS"/>
                                         <include reference="HFu-bs-NpT"/>
                                         <include reference="Sgl-lM-vxS"/>
                                         <include reference="dZf-U9-Nru"/>
-                                        <include reference="9y5-t2-GWj"/>
-                                        <include reference="iZz-Uo-jCS"/>
                                     </mask>
                                 </variation>
                             </view>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SLw-Zr-XgT">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SLw-Zr-XgT">
                                 <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="14" y="285" width="372" height="31"/>
-                                </variation>
                                 <connections>
                                     <action selector="sliderMoved:" destination="vXZ-lx-hvc" eventType="valueChanged" id="CQJ-nS-gG4"/>
                                 </connections>
@@ -124,11 +122,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="SLw-Zr-XgT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="BfZ-xR-hue"/>
+                            <constraint firstAttribute="centerY" secondItem="SLw-Zr-XgT" secondAttribute="centerY" id="CB9-bM-jvv"/>
                             <constraint firstAttribute="centerX" secondItem="97J-jy-TES" secondAttribute="centerX" id="bvR-1b-azD"/>
                             <constraint firstAttribute="centerY" secondItem="97J-jy-TES" secondAttribute="centerY" id="dkV-fj-9Y3"/>
                             <constraint firstAttribute="centerY" secondItem="97J-jy-TES" secondAttribute="centerY" constant="149.5" id="fDb-P6-Yz7">
                                 <variation key="widthClass=compact" constant="217.5"/>
                             </constraint>
+                            <constraint firstItem="SLw-Zr-XgT" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="iol-0U-noN"/>
                             <constraint firstItem="97J-jy-TES" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="nKI-EA-0kr"/>
                         </constraints>
                         <variation key="default">
@@ -141,6 +142,9 @@
                                 <exclude reference="dkV-fj-9Y3"/>
                                 <exclude reference="fDb-P6-Yz7"/>
                                 <exclude reference="nKI-EA-0kr"/>
+                                <exclude reference="BfZ-xR-hue"/>
+                                <exclude reference="CB9-bM-jvv"/>
+                                <exclude reference="iol-0U-noN"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -153,11 +157,17 @@
                                 <exclude reference="dkV-fj-9Y3"/>
                                 <include reference="fDb-P6-Yz7"/>
                                 <include reference="nKI-EA-0kr"/>
+                                <include reference="BfZ-xR-hue"/>
+                                <include reference="CB9-bM-jvv"/>
+                                <include reference="iol-0U-noN"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="currentDateValue" destination="IJ7-kB-HcR" id="oKT-iM-f1n"/>
+                        <outlet property="currentPercentValue" destination="3ue-gt-Gmf" id="STy-dN-rKX"/>
                         <outlet property="dateSlider" destination="SLw-Zr-XgT" id="rJ7-xf-OdD"/>
+                        <outlet property="whatHappened" destination="6ia-Vi-6vf" id="FL3-HL-cg2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
