@@ -36,7 +36,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="EUy-Pd-yUQ"/>
+                                            <constraint firstAttribute="height" constant="400" id="EUy-Pd-yUQ"/>
                                         </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -67,7 +67,9 @@
                                     <constraint firstItem="B3K-9d-pXb" firstAttribute="leading" secondItem="97J-jy-TES" secondAttribute="leading" constant="8" id="LBS-ZZ-JFA"/>
                                     <constraint firstItem="3ue-gt-Gmf" firstAttribute="leading" secondItem="97J-jy-TES" secondAttribute="leading" constant="8" id="NYJ-oe-SaP"/>
                                     <constraint firstAttribute="centerX" secondItem="6ia-Vi-6vf" secondAttribute="centerX" id="Sgl-lM-vxS"/>
-                                    <constraint firstAttribute="height" constant="185" id="blh-8z-zCG"/>
+                                    <constraint firstAttribute="height" constant="185" id="blh-8z-zCG">
+                                        <variation key="widthClass=compact" constant="500"/>
+                                    </constraint>
                                     <constraint firstItem="6ia-Vi-6vf" firstAttribute="width" secondItem="97J-jy-TES" secondAttribute="width" id="dZf-U9-Nru"/>
                                     <constraint firstAttribute="trailing" secondItem="IJ7-kB-HcR" secondAttribute="trailing" constant="8" id="iZz-Uo-jCS"/>
                                     <constraint firstItem="3ue-gt-Gmf" firstAttribute="top" secondItem="97J-jy-TES" secondAttribute="top" constant="8" id="qPk-J4-VPu"/>
@@ -123,11 +125,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SLw-Zr-XgT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="BfZ-xR-hue"/>
-                            <constraint firstAttribute="centerY" secondItem="SLw-Zr-XgT" secondAttribute="centerY" id="CB9-bM-jvv"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="SLw-Zr-XgT" secondAttribute="bottom" constant="20" id="LYJ-eA-Jd8"/>
                             <constraint firstAttribute="centerX" secondItem="97J-jy-TES" secondAttribute="centerX" id="bvR-1b-azD"/>
                             <constraint firstAttribute="centerY" secondItem="97J-jy-TES" secondAttribute="centerY" id="dkV-fj-9Y3"/>
                             <constraint firstAttribute="centerY" secondItem="97J-jy-TES" secondAttribute="centerY" constant="149.5" id="fDb-P6-Yz7">
-                                <variation key="widthClass=compact" constant="217.5"/>
+                                <variation key="widthClass=compact" constant="60"/>
                             </constraint>
                             <constraint firstItem="SLw-Zr-XgT" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="iol-0U-noN"/>
                             <constraint firstItem="97J-jy-TES" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="nKI-EA-0kr"/>
@@ -143,8 +145,8 @@
                                 <exclude reference="fDb-P6-Yz7"/>
                                 <exclude reference="nKI-EA-0kr"/>
                                 <exclude reference="BfZ-xR-hue"/>
-                                <exclude reference="CB9-bM-jvv"/>
                                 <exclude reference="iol-0U-noN"/>
+                                <exclude reference="LYJ-eA-Jd8"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -158,8 +160,8 @@
                                 <include reference="fDb-P6-Yz7"/>
                                 <include reference="nKI-EA-0kr"/>
                                 <include reference="BfZ-xR-hue"/>
-                                <include reference="CB9-bM-jvv"/>
                                 <include reference="iol-0U-noN"/>
+                                <include reference="LYJ-eA-Jd8"/>
                             </mask>
                         </variation>
                     </view>
