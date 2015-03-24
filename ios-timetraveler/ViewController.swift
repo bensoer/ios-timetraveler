@@ -8,10 +8,25 @@
 
 import UIKit
 import Darwin
+import Foundation
 //import Alamofire
+
+
 
 class ViewController: UIViewController {
 
+    
+    
+
+    
+    
+    
+    
+    
+    var canUpdate:Bool = true;
+    
+    var pageItemsArray = Array<NSString>();
+    
     @IBOutlet weak var dateSlider: UISlider!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,25 +39,73 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sliderMoved(sender: UISlider) {
-        var percent = sender.value;
         
-        var year = convertPercentToYear(Double(percent));
-        var day = getDayOfYear(year);
+        if (canUpdate){
+            canUpdate = false;
+            var percent = sender.value;
+            
+            var year = convertPercentToYear(Double(percent));
+            var day = getDayOfYear(year);
+            var month = getMonth(day);
+            var dateOfMonth = getDayOfMonth(day);
+            
+            println("Percent: \(percent), Year: \(year), Day: \(day)");
+            
+            getArticle(Int(year));
+            
+            
+            
+        }
         
-        println("Percent: \(percent), Year: \(year), Day: \(day)");
-        
-        getArticle(Int(year));
         
     }
     
-    private func getArticle(year:Int){
+    private func displayArticlesFromDate(month:Int, day:Int){
         
-        /*Alamofire.request(.GET, "http://en.wikipedia.org/w/api.php?action=query&continue&prop=extracts&format=json&title=2014")
-            .responseJSON{ (request, response, data, error) in
-                println(request)
-                println(response)
-                println(error)
-            }*/
+        
+        //var monthName:String = Months(rawValue: month);
+        
+        var string = getMonthName(day);
+        for(data:NSString ) in pageItemsArray{
+            
+            
+            
+        }
+    }
+    
+    private func getMonthName(month:Int)->String{
+        switch month {
+        case 1:
+            return "January";
+        case 2:
+            return "February";
+        case 3:
+            return "March";
+        case 4:
+            return "April";
+        case 5:
+            return "May";
+        case 6:
+            return "June";
+        case 7:
+            return "July";
+        case 8:
+            return "August";
+        case 9:
+            return "September";
+        case 10:
+            return "October";
+        case 11:
+            return "November";
+        case 12:
+            return "December";
+        default:
+            return "error";
+        }
+    }
+    
+    private func getArticle(year:Int){
+
         var url = NSURLRequest(URL: NSURL(string: "http://en.wikipedia.org/w/api.php?action=query&continue&prop=extracts&format=json&titles=2014")!);
         
         //var connection = NSURLConnection(url, respHandler, startimmediatly:true);
@@ -54,44 +117,97 @@ class ViewController: UIViewController {
     
     private func respHandler(resp:NSURLResponse!, data:NSData!, error:NSError!){
         
-        var jsonData = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil);
+        var jsonData:AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil);
         
         //println(jsonData);
         
-        var json = JSON(jsonData!);
-        
-        if let story = json["query"]["pages"].string{
-            var json2 = JSON(story);
-            
-            
-            
-            for(key: String, subJson: JSON) in json2 {
+        if let query = jsonData as? Dictionary<String, AnyObject>{
+            if let pages = query["query"] as AnyObject? as? Dictionary<String, AnyObject>{
+                //println(pages);
                 
-                
-                if let actual = json2[key]["extract"].string{
-                    println(actual);
+                if let number = pages["pages"] as AnyObject? as? Dictionary<String, AnyObject>{
+                    
+                    for(key:String, dataBelow: AnyObject) in number {
+                        
+                        //println("Key: \(key) , dataBelow: \(dataBelow)");
+                        
+                        if let extract = number[key] as AnyObject? as? Dictionary<String, AnyObject>{
+                            
+                            if let html = extract["extract"] as AnyObject? as? String{
+                                
+                                //println("THE HTML: \(html)");
+                                
+                                parseDateEventsOutOfPage(html);
+                                
+                                
+                            }
+                            
+                        }
+                        
+                        
+                    }
                 }
-                
-                
+            }
+        }
+        
+    }
+    
+    private func parseDateEventsOutOfPage(html:NSString){
+        
+        var shrinkingData:NSString = html;
+        //var startIndexOfLi:NSRange = 0;
+        //var endIndexOfLi:NSRange = 0;
+        
+        
+        while(true){
+            
+            var startIndexOfLi = shrinkingData.rangeOfString("<li>");
+            
+            if(startIndexOfLi.location == NSNotFound){
+                println("Couldn't find start");
+                break;
             }
             
+           
+            var endTagData:NSString = shrinkingData.substringWithRange(NSRange(location: startIndexOfLi.location + 4, length: shrinkingData.length - startIndexOfLi.location - 4));
             
-            println(story);
+            var endIndexOfLi = endTagData.rangeOfString("</li>");
+            endIndexOfLi.location += startIndexOfLi.location + 4;
+            
+            /*if(endIndexOfLi.location == NSNotFound){
+                println("Couldn't find end");
+                break;
+            }*/
+            
+            println("Start: \(startIndexOfLi.location) , End: \(endIndexOfLi.location)");
+            
+            var difference = endIndexOfLi.location - startIndexOfLi.location;
+            
+            var text = shrinkingData.substringWithRange(NSRange(location: startIndexOfLi.location + 4 , length: difference - 4));
+            
+            println(text);
+            
+            pageItemsArray.append(text);
+            
+            shrinkingData = shrinkingData.substringWithRange(NSRange(location: endIndexOfLi.location + 4, length: (shrinkingData.length - endIndexOfLi.location - 4)));
+            
+            //println("\n\n----------------" + shrinkingData + "\n\n--------------------------------------------------------");
+            
+            
+            //break;
+            
         }
-            println("pass");
         
-        //println(jsonData[0][0][0][0]);
+        canUpdate  = true;
+        
         
     }
     
     private func convertPercentToYear(percent:Double)->Double{
         
-        var euler = 0.5772156649;
-        
         var percent2 = percent * 100.00;
         
         println(percent2);
-        
         
         
         /* T = CURRENTTIME - (e^(20.3444(p^3) +3) -e^3 */
@@ -118,6 +234,14 @@ class ViewController: UIViewController {
         return day;
         
     
+    }
+    
+    private func getMonth(dayOfYear:Int)->Int{
+        return Int(dayOfYear  / 12);
+    }
+    
+    private func getDayOfMonth(dayOfYear:Int)->Int{
+        return Int( dayOfYear % 12);
     }
 
 }
